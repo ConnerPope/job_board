@@ -22,3 +22,28 @@
   font-weight: bold;
   font-size: 9px !important;
 }
+
+.button.is-fullwidth.is-primary {
+ background: #12664F !important;
+}
+
+.button.is-fullwidth.is-link {
+    background: #4CB944 !important;
+  }
+
+.button.is-fullwidth.is-warning {
+  background: #0CA4A5 !important;
+  color: white;
+}
+
+.button.is-fullwidth.is-info {
+  background: #0892A5;
+}
+
+.is-primary {
+  background: #f60101 !important;
+}
+
+.tag.is-primary {
+  background: #12664F !important;
+}
