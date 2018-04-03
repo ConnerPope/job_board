@@ -1,10 +1,4 @@
-![Let's Buiild With Ruby on Rails - Job Board with Payments](https://i.imgur.com/FSJ9yxp.jpg)
-
-# Let's Build: With Ruby on Rails - Job Board with Payments
-
-Welcome to what I'll be calling my tenth installment to my Let's Build: With Ruby on Rails series. In this build I'll cover how to build a filterable job board using Stripe as a payment gateway to post new jobs.
-
-### More about the app
+### About Job Board
 
 The basis of the application is a job board where anyone looking to get hired can come and apply for positions. If you are a user or company looking to post a job you can sign up for an account and do so for a fee. We use a combination of the [Stripe](https://stripe.com) API and the Stripe Ruby Gem to initialize a charge when a job gets posted.
 
@@ -53,8 +47,3 @@ Each `User` will have:
   - Card Exp Year - `card_exp_year:string`
   - Expires at - `expires_at:datetime`
   - Admin - `admin:boolean`
-
-
-Read more at [web-crunch.com ›](https://web-crunch.com/lets-build-with-ruby-on-rails-job-board-with-payments/)
-
-
