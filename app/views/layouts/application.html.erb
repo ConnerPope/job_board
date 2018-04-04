@@ -41,27 +41,30 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped">
-            <p class="control">
-              <%= link_to 'Post Job', new_job_path, class: "navbar-item button is-primary is-rounded" %>
-            </p>
-            <% if user_signed_in? %>
 
-              <div class="navbar-item has-dropdown is-hoverable">
-                <%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %>
-                <div class="navbar-dropdown is-right">
-                  <%= link_to current_user.name, edit_user_registration_path, class:"navbar-item" %>
-                  <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
+              <% if user_signed_in? %>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <%= link_to 'Account', edit_user_registration_path, class: "navbar-link account" %>
+                  <div class="navbar-dropdown is-right">
+                    <%= link_to current_user.name, edit_user_registration_path, class:"navbar-item" %>
+                    <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
+                  </div>
                 </div>
-              </div>
-            <% else %>
-            <p class="control">
-              <%= link_to "Sign In", new_user_session_path, class:"navbar-item button" %>
-            </p>
-            <p class="control">
-              <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button"%>
-            </p>
-            <% end %>
+              <% else %>
+                <p class="control">
+                  <%= link_to "Sign In", new_user_session_path, class:"navbar-item button login" %>
+                </p>
+                <p class="control">
+                  <%= link_to "Sign Up", new_user_registration_path, class:"navbar-item button signup"%>
+                </p>
+              <% end %>
 
+            <p class="control job-post">
+              <strong>
+              <%= link_to 'POST A JOB', new_job_path, class: "navbar-item button is-primary" %>
+              </strong>
+            </p>
           </div>
         </div>
       </div>
@@ -75,7 +78,7 @@
     <div class="container">
       <div class="content has-text-centered">
         <p>
-        Visit <a href="https://web-crunch.com" target="_blank">Popesites.com</a> for more builds like this one.
+          Copyright &copy; 2018 <a href="https://popesites.com/" target="_blank">Popesites, LLC</a>.
         </p>
       </div>
     </div>
