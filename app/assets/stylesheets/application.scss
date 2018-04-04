@@ -62,6 +62,7 @@ nav {
   background: #333 !important;
   border: 12px solid #f8f8f8;
   margin-top: 25px;
+  height: 308px;
 }
 
 body {
@@ -134,4 +135,9 @@ a.navbar-item:hover {
 
 .navbar-item.has-dropdown.is-hoverable:hover {
   background-color: #333 !important;
+}
+
+.notification.is-success.global-notification {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
 }

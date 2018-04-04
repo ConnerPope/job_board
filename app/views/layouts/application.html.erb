@@ -7,20 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', "https://js.stripe.com/v2/", "https://js.stripe.com/v3/", 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', "https://js.stripe.com/v2/", "https://js.stripe.com/v3/", "https://popesites.com/cdn-js/jb-global-bar.js", 'data-turbolinks-track': 'reload' %>
 
     <%= tag :meta, name: "stripe-public-key", content: Figaro.env.stripe_publishable_key %>
   </head>
 
+  <script>
+    function hideContent() {
+        var divOne = document.getElementById('1');
+        divOne.style.display = "none";
+    }
+
+  </script>
+
   <body class="<%= yield (:body_class) %>">
     <% if flash[:notice] %>
-      <div class="notification is-success global-notification">
-        <p class="notice"><%= notice %></p>
+      <div id="1" class="notification is-success global-notification">
+        <p class="notice"><span class="right-a"><%= notice %></span><strong><span style="margin-left: 80%"><a id="close-box" onclick="hideContent()">[Okay]</a></span></strong></p>
       </div>
     <% end %>
 
     <% if flash[:alert] %>
-    <div class="notification is-danger global-notification">
+    <div id="1" class="notification is-danger global-notification">
       <p class="alert"><%= alert %></p>
     </div>
     <% end %>
