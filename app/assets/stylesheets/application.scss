@@ -24,26 +24,114 @@
 }
 
 .button.is-fullwidth.is-primary {
- background: #12664F !important;
+ background: #D8315B !important;
 }
 
 .button.is-fullwidth.is-link {
-    background: #4CB944 !important;
+    background: #3E92CC !important;
   }
 
 .button.is-fullwidth.is-warning {
-  background: #0CA4A5 !important;
+  background: #86CB92 !important;
   color: white;
 }
 
 .button.is-fullwidth.is-info {
-  background: #0892A5;
-}
-
-.is-primary {
-  background: #f60101 !important;
+  background: #0A2463;
 }
 
 .tag.is-primary {
   background: #12664F !important;
+}
+
+.footer {
+  background: #333 !important;
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+}
+
+nav {
+  background: #333 !important;
+}
+
+.title.is-5 {
+  color: #f8f8f8;
+}
+
+.column.is-2.bg-light {
+  background: #333 !important;
+  border: 12px solid #f8f8f8;
+  margin-top: 25px;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+.text-uppercase.has-text-gray.pv1.f6 {
+  color: #f8f8f8;
+}
+
+.button.is-fullwidth.is-dark {
+  background: #f8f8f8;
+  color: #333;
+}
+
+.content.has-text-centered {
+  p {
+    color: #d8d9da;
+  }
+  a {
+    color: #D8315B;
+  }
+}
+
+.navbar-item.button.is-primary {
+  background: #D8315B !important;
+  margin-left: 14px;
+}
+
+.navbar-item.button.is-primary:hover {
+  background: #333 !important;
+  border: 1px solid #f8f8f8;
+}
+
+a.navbar-item:hover {
+  background: #333;
+}
+
+.navbar-brand {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.navbar-item.button.login, .navbar-item.button.signup {
+  background: #333;
+  color: #f8f8f8;
+}
+
+.navbar-item.button.login:hover {
+  background: #f8f8f8;
+  color: #333;
+}
+
+.navbar-item.button.signup:hover {
+  background: #f8f8f8;
+  color: #333;
+}
+
+.control.job-post {
+  border-left: 1px solid #f8f8f8;
+}
+
+.is-primary {
+  background: #D8315B !important;
+}
+
+.navbar-link.account {
+  color: #f8f8f8;
+}
+
+.navbar-item.has-dropdown.is-hoverable:hover {
+  background-color: #333 !important;
 }
