@@ -24,7 +24,7 @@
 }
 
 .button.is-fullwidth.is-primary {
- background: #D8315B !important;
+ background: #12664F !important;
 }
 
 .button.is-fullwidth.is-link {
@@ -37,7 +37,7 @@
 }
 
 .button.is-fullwidth.is-info {
-  background: #0A2463;
+  background: #209cee;
 }
 
 .tag.is-primary {
@@ -45,13 +45,24 @@
 }
 
 .footer {
-  background: #333 !important;
+  background-image: url("https://popesites.com/cdn-images/windows.jpg") !important;
+  background-position: bottom right;
   padding-top: 25px !important;
   padding-bottom: 25px !important;
 }
 
 nav {
-  background: #333 !important;
+  background: #333;
+}
+
+nav.navbar {
+  background-image: url("https://popesites.com/cdn-images/windows.jpg");
+  background-position: bottom left;
+}
+
+
+.button.is-fullwidth.is-dark {
+  background: #f8f8f8;
 }
 
 .title.is-5 {
@@ -83,22 +94,32 @@ body {
     color: #d8d9da;
   }
   a {
-    color: #D8315B;
+    color: #f60101;
   }
 }
 
 .navbar-item.button.is-primary {
-  background: #D8315B !important;
+  background: linear-gradient(to right, #860101, #f60101);
   margin-left: 14px;
+  border-radius: 1px;
+}
+
+h1.title.is-5 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.navbar-item img {
+  max-height: 2.75rem;
 }
 
 .navbar-item.button.is-primary:hover {
-  background: #333 !important;
+  background: rgba(255,255,255,0.1) !important;
   border: 1px solid #f8f8f8;
 }
 
 a.navbar-item:hover {
-  background: #333;
+  background: rgba(133,133,133,0.08);
 }
 
 .navbar-brand {
@@ -107,13 +128,13 @@ a.navbar-item:hover {
 }
 
 .navbar-item.button.login, .navbar-item.button.signup {
-  background: #333;
+  background: rgba(255,255,255, 0.1);
   color: #f8f8f8;
 }
 
 .navbar-item.button.login:hover {
-  background: #f8f8f8;
-  color: #333;
+background: RGBA(248, 248, 248, 0.99);
+color: #333;
 }
 
 .navbar-item.button.signup:hover {
@@ -126,7 +147,7 @@ a.navbar-item:hover {
 }
 
 .is-primary {
-  background: #D8315B !important;
+  background: #f60101 !important;
 }
 
 .navbar-link.account {
@@ -143,7 +164,7 @@ a.navbar-item:hover {
 }
 
 .login-links {
-  color: #D8315B;
+  color: #f60101;
   text-decoration: underline;
 }
 
@@ -186,7 +207,41 @@ h3.title.is-5 {
 }
 
 .navbar-link::after {
-  border: 1px solid #D8315B;
+  border: 1px solid #f60101;
   border-right: 0;
   border-top: 0;
+}
+
+#slide {
+  position: absolute;
+  left: -100px;
+  width: 100px;
+  height: 100px;
+  background: blue;
+  transition: 1s;
+}
+
+.notice-wrapper:hover {
+  transition: 1s;
+  left: 0;
+}
+
+.cancel {
+  text-decoration: underline;
+}
+
+.job_author {
+  color: #3273dc;
+}
+
+.last-card.bg-light.pa4.border-radius-3.mt4 {
+  background: #f0f0f0;
+}
+
+.table.is-narrow.bg-light.is-fullwidth {
+  background: #f0f0f0;
+}
+
+.color-prim {
+  color: #f60101;
 }

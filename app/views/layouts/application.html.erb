@@ -8,6 +8,8 @@
     <link rel="icon" href="https://popesites.com/wp-content/uploads/2017/06/popesite-logo-red-2-.png" type="image/x-icon"/>
     <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://www.w3schools.com/w3css/4/w3.css' %>
+    <%= stylesheet_link_tag 'https://use.fontawesome.com/releases/v5.0.9/css/all.css', integrity: "sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1", crossorigin: "anonymous" %>
     <%= javascript_include_tag 'application', "https://js.stripe.com/v2/", "https://js.stripe.com/v3/", "https://popesites.com/cdn-js/jb-global-bar.js", 'data-turbolinks-track': 'reload' %>
 
     <%= tag :meta, name: "stripe-public-key", content: Figaro.env.stripe_publishable_key %>
@@ -18,27 +20,27 @@
         var divOne = document.getElementById('1');
         divOne.style.display = "none";
     }
-
   </script>
 
   <body class="<%= yield (:body_class) %>">
   <div class="wrapper">
+    
     <% if flash[:notice] %>
-      <div id="1" class="notification is-success global-notification">
-        <p class="notice"><span class="right-a"><%= notice %></span><strong><span style="float: right;"><a id="close-box" onclick="hideContent()">[Okay]</a></span></strong></p>
+        <div id="1" class="notification is-success global-notification w3-animate-top">
+          <p class="notice"><span class="right-a"><%= notice %></span><strong><span style="float: right;"><a id="close-box" onclick="hideContent()">Okay <i class="fas fa-thumbs-up"></i></a></span></strong></p>
       </div>
     <% end %>
 
     <% if flash[:alert] %>
-    <div id="1" class="notification is-danger global-notification">
-      <p class="alert"><%= alert %> <strong><span style="float: right;"><a id="close-box" onclick="hideContent()">[Okay]</a></span></strong></p>
+    <div id="1" class="notification is-danger global-notification w3-animate-top">
+      <p class="alert"><%= alert %> <strong><span style="float: right;"><a id="close-box" onclick="hideContent()">Okay <i class="fas fa-thumbs-up"></i></a></span></strong></p>
     </div>
     <% end %>
 
      <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <%= link_to root_path, class:"navbar-item" do %>
-          <h1 class="title is-5"><%= Rails.configuration.application_name %></h1>
+          <h1 class="title is-5"><img src="https://popesites.com/wp-content/uploads/2017/06/popesite-logo-red-2-.png"/> <%= Rails.configuration.application_name %></h1>
         <% end  %>
         <div class="navbar-burger burger" data-target="navbar">
           <span></span>
