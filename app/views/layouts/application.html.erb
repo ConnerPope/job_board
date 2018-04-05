@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://popesites.com/wp-content/uploads/2017/06/popesite-logo-red-2-.png" type="image/x-icon"/>
     <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', "https://js.stripe.com/v2/", "https://js.stripe.com/v3/", "https://popesites.com/cdn-js/jb-global-bar.js", 'data-turbolinks-track': 'reload' %>
@@ -21,15 +22,16 @@
   </script>
 
   <body class="<%= yield (:body_class) %>">
+  <div class="wrapper">
     <% if flash[:notice] %>
       <div id="1" class="notification is-success global-notification">
-        <p class="notice"><span class="right-a"><%= notice %></span><strong><span style="margin-left: 80%"><a id="close-box" onclick="hideContent()">[Okay]</a></span></strong></p>
+        <p class="notice"><span class="right-a"><%= notice %></span><strong><span style="float: right;"><a id="close-box" onclick="hideContent()">[Okay]</a></span></strong></p>
       </div>
     <% end %>
 
     <% if flash[:alert] %>
     <div id="1" class="notification is-danger global-notification">
-      <p class="alert"><%= alert %></p>
+      <p class="alert"><%= alert %> <strong><span style="float: right;"><a id="close-box" onclick="hideContent()">[Okay]</a></span></strong></p>
     </div>
     <% end %>
 
@@ -55,7 +57,7 @@
                 <div class="navbar-item has-dropdown is-hoverable">
                   <%= link_to 'Account', edit_user_registration_path, class: "navbar-link account" %>
                   <div class="navbar-dropdown is-right">
-                    <%= link_to current_user.name, edit_user_registration_path, class:"navbar-item" %>
+                    <%= link_to "My Account", edit_user_registration_path, class:"navbar-item" %>
                     <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
                   </div>
                 </div>
@@ -81,8 +83,9 @@
 
 
   <%= yield %>
+  </div>
 
-  <footer class="footer">
+    <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
         <p>
